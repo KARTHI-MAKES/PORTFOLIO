@@ -1,0 +1,65 @@
+:root {
+    --background-color: #ffffff; /* Light background color */
+    --btn-color: #0987f2; /* Button color */
+    --btn-text-color: #ffffff; /* Button text color */
+    --text-color: #222222; /* Main text color */
+}
+
+[data-theme='dark'] {
+    --background-color: #222222; /* Dark background color */
+    --btn-color: #ffffff; /* Light button color */
+    --text-color: #ffffff; /* Main text color in dark theme */
+}
+
+body {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+h1, h2, p {
+    color: var(--text-color);
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+.hover {
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.hover:hover {
+    background-color: var(--btn-color);
+    color: var(--btn-text-color);
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 24px; /* Adjusted for mobile */
+    }
+    
+    h2 {
+        font-size: 18px; /* Adjusted for mobile */
+    }
+}
